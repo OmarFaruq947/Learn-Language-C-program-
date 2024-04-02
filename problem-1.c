@@ -34,8 +34,5 @@ printf("Average marks = %.2f \n",average);
 float Percentage = (sum/500.00)*100;
 printf("percentage marks = %.2f \n", Percentage);
 
-
-
 return 0;
-    
 }
