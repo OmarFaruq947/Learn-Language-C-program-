@@ -1,25 +1,19 @@
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-    char str[105];
-fgets(str, 105, stdin);
+#include <stdio.h>
 
-int len = strlen(str);
+int main() {
+    char str[100001];
+    fgets(str, sizeof(str), stdin);
 
-    for (int i = 0; i<len; i++)
-{
-    if (str[i] == ',')
-    {
-        str[i]=' ';
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ',') {
+            str[i] = ' ';
+        } else if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - 'a' + 'A';
+        } else if (str[i] >= 'A' && str[i] <= 'Z') {
+            str[i] = str[i] - 'A' + 'a';
+        }
     }
-    else if(str[i] >= 'A' && str[i] <='Z'){
-        str[i] = str[i]+('a' - 'A');
-    }else if(str[i] >= 'a' && str[i] <= 'z'){
-        str[i] = str[i] -('a'-'A');
-    }
-}
-printf("%s", str);
 
+    printf("%s", str);
     return 0;
 }

@@ -3,27 +3,24 @@
 
 
 int main() {
-     char str[100];
-    fgets(str, 100, stdin);
+      char str[1001]; 
+    scanf("%s", str); 
 
-    int i = 0;
-    int j = strlen(str) - 1;
-    int palindrome=0;
+int len = strlen(str);
+    int palindrome=1;
 
-    while (i < j) {
-        if (str[i] != str[j]) {
-            palindrome=0;
-        }else{
-            palindrome=1;
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - 1 - i]) {
+            palindrome = 0; 
+            break;
         }
-        i++;
-        j--;
     }
+
     if (palindrome)
     {
-        printf("YES");
+        printf("YES\n");
     }else{
-        printf("NO");
+        printf("NO\n");
     }
     
     
