@@ -3,26 +3,59 @@
 
 
 int main() {
-      char str[1001]; 
-    scanf("%s", str); 
+     char str[100];
+    fgets(str, 100, stdin);
 
-int len = strlen(str);
-    int palindrome=1;
+    int low = 0;
+    int high = strlen(str) - 1;
+    int palindrome=0;
 
-    for (int i = 0; i < len / 2; i++) {
-        if (str[i] != str[len - 1 - i]) {
-            palindrome = 0; 
-            break;
+    while (low < high) {
+        if (str[low] != str[high]) {
+            palindrome=0;
+        }else{
+            palindrome=1;
         }
+        low++;
+        high--;
     }
-
     if (palindrome)
     {
-        printf("YES\n");
+        printf("YES");
     }else{
-        printf("NO\n");
+        printf("NO");
     }
     
     
     return 0;
 }
+
+
+
+//....... write answer .....
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main() {
+//     char txt[1001]; 
+//     scanf("%s", txt); 
+
+//     int len = strlen(txt);
+//     int isPalindrome = 1; 
+
+//     for (int i = 0; i < len / 2; i++) {
+//         if (txt[i] != txt[len - 1 - i]) {
+//             isPalindrome = 0; 
+//             break;
+//         }
+//     }
+
+//     if (isPalindrome) {
+//         printf("YES\n");
+//     } else {
+//         printf("NO\n");
+//     }
+
+//     return 0;
+// }
