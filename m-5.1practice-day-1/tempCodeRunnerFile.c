@@ -1,0 +1,1 @@
+printf("YES %s", new_str);
