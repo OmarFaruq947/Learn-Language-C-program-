@@ -6,14 +6,7 @@ int main()
 char A[size], B[size];
 
 scanf ("%s %s", &A, &B);
-
-for (int i = 0; i <= strlen(B); i++)
-{
- A[i] = B[i];
+    strcat(A,B);
+    printf("%s %s", A, B);
+return 0;
 }
-
-printf("%s", A);
-    return 0;
-}
-
-// strcpy(A,B)

@@ -19,7 +19,7 @@ while (1)
     break;
    }
    else if(A[i] == '\0'){
-    printf("-A choto \n");
+    printf("A choto \n");
     break;
    }
    else if(B[i] == '\0'){
@@ -31,7 +31,7 @@ while (1)
    if(A[i] == B[i]){
     i++;
    }else if(A[i] < B[i]){
-    printf("--A choto \n");
+    printf("A choto \n");
     break;
    }else {
     printf("B choto \n");
@@ -39,7 +39,8 @@ while (1)
    }
 }
 
-
-
     return 0;
 }
+
+
+// strcmp(A,B)
