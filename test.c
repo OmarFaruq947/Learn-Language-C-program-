@@ -1,29 +1,15 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
 int main()
 {
 
-char str[100];
-  scanf ("%s", &str);
+    int ary[4] = {1, 2, 3, 4};
 
-// for (int i = 0; i <strlen(str); i++)
-// {
-// int value = str[i]-'a';
-// printf("%d  ", value);
-// }
+    int *p;
 
+    p = ary + 3;
 
+    *p = 5;
 
-int count[26]={0};
-for (int i = 0; i < strlen(str); i++)
-{
-    int value = str[i] -'a';
-    count[value]++;
-}
+    printf("%d\n", ary[3]);
 
-for (int i = 0; i <26; i++)
-{
-    printf("%c : %d\n",i+'a',count[i]);
-}
-    return 0;
 }
